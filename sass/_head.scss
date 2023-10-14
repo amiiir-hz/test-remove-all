@@ -1,0 +1,51 @@
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+
+  &-img {
+    max-width: 60rem;
+    margin-bottom: 4rem;
+  }
+
+  &-nav {
+    margin-bottom: 4rem;
+    opacity: 0.5;
+
+    &-list {
+      a {
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+  &-fade {
+    padding: 0 20rem;
+    :not(:nth-child(4)) {
+      margin-right: 0.5rem;
+    }
+
+    svg {
+      background: #fff;
+      border-radius: 50000px;
+      width: 3rem;
+      height: 3rem;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    span {
+      transition: opacity 0.3s;
+    }
+
+    &:hover span:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}
